@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+
+body{
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  background-color:black!important;
+}
+
+.container{
+  margin-top: 2rem;
+  width: 100%;
+  margin: 1em auto;
+  background-color:yellowgreen;
+}
+.grid{
+  display: grid;
+  margin-left: .5px;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1.2em;
+  justify-content: center;
+}
+
+.sorry{
+
+  height: 80vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+
+  /* background: white!important; */
+
+}
+
+.btn:focus{
+  box-shadow: none!important;
+  /* border:none!important; */
+}
+input:focus{
+  box-shadow: none!important;
+  border:black!important;
+}
+
+@media only screen and (max-width: 989px) {
+  .grid{
+    display: grid;
+    margin-left: .5px;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.2em;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .grid{
+    display: grid;
+    margin-left: .5px;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1.2em;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .grid{
+    display: grid;
+    margin-left: .5px;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 1.2em;
+    justify-content: center;
+  }
+}
+
