@@ -1,0 +1,121 @@
+.movie-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    justify-content: center;
+    color: #ffffff;
+    backdrop-filter: blur(8px);
+  
+  }
+
+.movie-title{
+    font-size: 60px;
+    color: #ffffff;
+    
+  }
+  .movie-overview{
+      margin-bottom: 30px;
+  }
+  .movie-content{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 90vh;
+
+  }
+  .movie-poster img{
+    border-radius: 15px;
+      max-width:224px;
+      height: auto;
+      object-fit: contain;
+    
+  
+  }
+ 
+  .movie-description{
+          
+          max-width:50%;
+          margin-right: 30px;
+          
+  }
+  
+  .list{
+       list-style-type:none;
+       color:rgb(255, 255, 255);
+  }
+  .list li{
+    margin-bottom: 10px;
+    text-align: center;
+ 
+  }
+      
+  .tagline{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 5px;
+    max-width: 224px;
+    font-weight: 300;
+    border-radius: 15px;
+    font-size: 14px;
+  
+  }
+
+
+  @media only screen and (max-width: 540px) {
+    .movie-content{
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 10px 10px;
+        padding:0;
+    }
+
+    .movie-description {
+        max-width: 50%;
+        margin-right: -30px;
+    }
+
+    .movie-title {
+        font-size: 58px;
+        color: #ffffff;
+    }
+    /* .movie-overview {
+        margin-bottom: 30px;
+        font-size: 15px;
+    } */
+    
+  }
+
+  @media only screen and (max-width: 414px){
+    .movie-description {
+        max-width: 50%;
+        margin-right: 30px;
+    }
+      .movie-title {
+        font-size: 58px;
+        color: #ffffff;
+        text-align: center;
+  }
+  
+}
+
+@media only screen and (max-width: 280px){
+    movie-description {
+        max-width: 50%;
+        margin-right: -90px;
+    }
+
+    .movie-title {
+        font-size: 44px;
+        color: #ffffff;
+        text-align: center;
+    }
+/* p{
+    
+font-size: 15px;
+} */
+
+
+}
