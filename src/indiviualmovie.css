@@ -104,18 +104,19 @@
 @media only screen and (max-width: 280px){
     movie-description {
         max-width: 50%;
-        margin-right: -90px;
+        margin-right: 90px;
     }
 
     .movie-title {
-        font-size: 44px;
+        font-size: 25px;
         color: #ffffff;
-        text-align: center;
+        
     }
-/* p{
+p{
     
-font-size: 15px;
-} */
+font-size: 10px;
+    width: 175%;
+}
 
 
 }

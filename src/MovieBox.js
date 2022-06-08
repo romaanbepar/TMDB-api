@@ -1,11 +1,11 @@
 
 // import { Modal,show,Button} from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
  const API_IMG="https://image.tmdb.org/t/p/w500/"
 
 const MovieBox = ({title,overview,poster_path,vote_average,release_date, id}) => {
 
-  const navigate=useNavigate()
+  
 
 
 //     const[show,setShow]=useState(false)
@@ -19,7 +19,7 @@ const MovieBox = ({title,overview,poster_path,vote_average,release_date, id}) =>
             
         </div>
         <div className='card-body'>
-        <Link to={`/indivialmovie/${id}`}><button type="button" className='btn btn-warning btn-sm' onClick={()=>navigate('indiviualmovie')}>view More</button></Link>
+        <Link to={`/${id}`}><button type="button" className='btn btn-warning btn-sm'>view More</button></Link>
             
         </div>
         

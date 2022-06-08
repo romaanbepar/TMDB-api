@@ -57,16 +57,14 @@ function App() {
     <>{
       loading?      
       <div className='loader_wrapper'>     
-       <BeatLoader      color="#80FFD4" width="100px" height="100px"/>      
+       <BeatLoader color="#80FFD4" width="100px" height="100px"/>      
        </div>      
-       
-       :
-
+      :
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/home">MovieDb App</Navbar.Brand>
-          <Navbar.Brand href="/home">Trending</Navbar.Brand>
+          <Navbar.Brand href="/">MovieDb App</Navbar.Brand>
+          <Navbar.Brand href="/">Trending</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
 
           <Navbar.Collapse id="nabarScroll">

@@ -7,8 +7,8 @@ const Routess = () => {
     <div>
       <BrowserRouter>
       <Routes>
-          <Route  exact path="/" element={<App/>}/>
-          <Route exact path="/IndivialMovie/:id" element={<IndivialMovie/>}/>
+          <Route  path="/" element={<App/>}/>
+          <Route  path=":id" element={<IndivialMovie/>}/>
       </Routes>
       </BrowserRouter>  
     </div>
