@@ -112,10 +112,10 @@
         color: #ffffff;
         
     }
-p{
+    .movie-details p{
     
 font-size: 10px;
-    width: 175%;
+    width: 100%;
 }
 
 

@@ -1,6 +1,6 @@
 
 // import { Modal,show,Button} from 'react-bootstrap';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
  const API_IMG="https://image.tmdb.org/t/p/w500/"
 
 const MovieBox = ({title,overview,poster_path,vote_average,release_date, id}) => {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import MovieBox from "./MovieBox";
+import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Navbar,
@@ -63,8 +64,11 @@ function App() {
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
+      
           <Navbar.Brand href="/">MovieDb App</Navbar.Brand>
-          <Navbar.Brand href="/">Trending</Navbar.Brand>
+          <Link to={"/login"}>  <Button variant="secondary " type="submit">
+                Login
+              </Button></Link>
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
 
           <Navbar.Collapse id="nabarScroll">

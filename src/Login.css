@@ -1,0 +1,51 @@
+
+  
+.App {
+    text-align: center;
+    background-color: #282c34;
+  }
+  
+  body{
+    background-color: #282c34;
+  }
+
+  .main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .container1{
+    padding: 10px;
+    background-color:white;
+    width:40%;
+    border-radius: 15px;
+  }
+  
+  .container1 p{
+      min-height: 25px;
+      margin:0;
+  }
+  .form-control:focus{
+      outline: 1px solid blue;
+  }
+  /* responsiveness/// */
+  @media only screen and (max-width:991px){
+    .container1 {
+        padding: 0px 10px;
+        background-color: white;
+        width: 70%;
+    }
+  }
+
+  @media only screen and (max-width:768px){
+    .container1 {
+        padding: 0px 10px;
+        background-color: white;
+        width: 90%;
+    }
+  }
+
+ 
