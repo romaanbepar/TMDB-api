@@ -2,13 +2,14 @@ import React from "react";
 import "./indiviualmovie.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 import { Button } from "react-bootstrap";
 // const API_IMG = "https://image.tmdb.org/t/p/w500/";
 const API_URL = "https://api.themoviedb.org/3";
 
 const IndivialMovie = () => {
   const [movie, setMovie] = useState([]);
+//   const navigate=useNavigate()
   const { id } = useParams();
 
   useEffect(() => {
@@ -25,6 +26,9 @@ const IndivialMovie = () => {
     }
     getmovies();
   }, [id]);
+
+  
+
 
   return (
     <>
@@ -47,7 +51,7 @@ const IndivialMovie = () => {
             <li>Voting - {movie.vote_average}</li>
             <li>Release Date - {movie.release_date}</li>
             <li>Revenue - {movie.revenue}</li>
-            <Link to={"/"}>
+            <Link to={"/app"}>
             
               <Button variant="secondary " type="submit">
                 Home

@@ -2,8 +2,11 @@ import React from "react";
 import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as yup from "yup";
 import "./Login.css";
-
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+
+    const navigate=useNavigate()
     const defaultValues = {
         name: "",
         email: ""
@@ -13,10 +16,26 @@ const Login = () => {
       name:yup.string().required("enter the string only"),
       email:yup.string().required("pls enter the email").email("pls enter the valid email")
         })
+
+        
+const fetchToken=async()=>{
+  try{
+    const response=await axios.get("https://api.themoviedb.org/3/authentication/token/new?api_key=b787641793c56c4a2435b97b586f64d3")
+    console.log(response.data);
+    // setToken(response.data.request_token)
+    const Token_Key=response.data.request_token
+    localStorage.setItem("users",Token_Key)
+     navigate("/app")
+  }catch(error){
+    console.log(error);
+  }
+}
     
     
       const handleSubmit=(value)=>{
         console.log("values",value);
+
+        fetchToken()
       }
     
     
