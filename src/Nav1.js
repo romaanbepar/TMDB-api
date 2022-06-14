@@ -6,12 +6,17 @@ import {
     Form,
     FormControl,
     Button,
+    Dropdown,
   } from "react-bootstrap";
 
   import {Link,useNavigate} from "react-router-dom"
   const Nav1 = ({movies,setmovies}) => {
     const [query, setQuery] = useState("");
-    // const [movies, setMovies] = useState([]);
+    // const [movies1, setMovies] = useState([]);
+    // const [optionValue, setOptionValue] = useState("");
+    // const [mov, setPrices] = useState([]);
+
+
 
     const [login,setLogin]= useState(null)
  const navigate=useNavigate()
@@ -37,9 +42,7 @@ console.log(local)
       };
       console.log(movies);
     
-      const changeHandler = (e) => {
-        setQuery(e.target.value);
-      };
+     
 
 
 
@@ -50,6 +53,27 @@ console.log(local)
         setLogin(false)
         navigate("/")
       }
+
+
+      //handling function
+      const changeHandler=(e)=>{
+        setQuery(e.target.value);
+      }
+
+    //   //sorting high and low function
+    //   console.log(mov);
+    //   const sortAscending = () => {
+    //     const sortAscPrices = movies.sort((a, b) => a.vote_average - b.vote_average) 
+    //     console.log(sortAscPrices);   
+    //     setPrices( sortAscPrices )
+    //   }
+
+
+    //   const sortDescending = () => {
+    //     const sortDescPrices = [...movies]
+    //     movies.sort((a, b) => a.vote_average - b.vote_average).reverse()
+    //     setPrices( sortDescPrices )
+    // }
   return (
     <div>
 
@@ -57,6 +81,8 @@ console.log(local)
         <Container fluid>
       
           <Navbar.Brand href="/">MovieDb App</Navbar.Brand>
+          {/* <Button onClick={sortAscending}>LowToHigh</Button>
+          <Button onClick={sortDescending}>HighToLow</Button> */}
           
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
     
@@ -73,6 +99,7 @@ console.log(local)
             <Form className="d-flex" onSubmit={searchMovie} autoComplete="off">
             {login ? (
       <>
+    
        <FormControl
                 type="search"
                 placeholder="Movie Search"
@@ -81,6 +108,7 @@ console.log(local)
                 name="query"
                 value={query}
                 onChange={changeHandler}
+                
               ></FormControl>
               <Button variant="secondary" type="submit">
                 Search

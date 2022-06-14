@@ -1,9 +1,9 @@
-// import React,{useEffect} from 'react'
+import React,{useEffect} from 'react'
 import Nav1 from './Nav1'
 import "./Home.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
-//  const navigate=useNavigate()
+ const navigate=useNavigate()
 //     useEffect(()=>{
 //         const check=localStorage.getItem("users")
 //         console.log(check)
@@ -12,9 +12,19 @@ const Home = () => {
 //         }
 //      },[])
 
+
+    useEffect(()=>{
+      const token=localStorage.getItem("users")
+      if(token===true){
+        navigate("/")
+        
+      }
+    })
+
   return (
     <> 
     <Nav1/>
+    <section className='sec'></section>
 
     </>
   )

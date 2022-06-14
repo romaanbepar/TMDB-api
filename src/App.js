@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import MovieBox from "./MovieBox";
-
+import { useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -21,6 +21,9 @@ function App() {
     "https://api.themoviedb.org/3/movie/popular?api_key=b787641793c56c4a2435b97b586f64d3";
   const [movies, setMovies] = useState([]);
   let [loading, setLoading] = useState(false);
+  const [mov, setPrices] = useState([]);
+
+  const navigate=useNavigate();
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
@@ -38,6 +41,51 @@ function App() {
   }, []);
 
   
+  useEffect(()=>{
+     const check=localStorage.getItem("users")
+        console.log(check)
+        if(check === null){
+          navigate('/login')
+        }
+     },[])
+
+     
+  
+      // useEffect(() => {
+      //     let mov = movies.map(p => p.vote_average.substring(3));
+      //     setPrices(mov)
+      // }, []);
+  
+
+      //working
+      console.log(mov);
+      const sortAscending = () => {
+        const sortAscPrices = movies.sort((a, b) => a.vote_average - b.vote_average) 
+        console.log(sortAscPrices);   
+        setPrices( sortAscPrices )
+      }
+      
+      // const sortDescending = () => {
+      //   const sortDescPrices = [...prices]
+      //     const sortDescPrices =movies.sort((a, b) => b.vote_average - a.vote_average)
+      //     setPrices( sortDescPrices )
+      //     console.log(sortDescPrices);   
+      // }
+
+      // working
+      const sortDescending = () => {
+        const sortDescPrices = [...movies]
+        movies.sort((a, b) => a.vote_average - b.vote_average).reverse()
+        setPrices( sortDescPrices )
+    }
+
+    // const sortDescending = () => {
+    //   const sortDescPrices = [...movies]
+    //  movies.sort((a, b) => b.vote_average - a.vote_average)
+
+    //   // movies.sort((a, b) => a - b).reverse()
+    //   setPrices( sortDescPrices )
+  // }
 
   return (
     <>{
@@ -48,7 +96,12 @@ function App() {
       :
     <>
      <Nav1 movies={movies} setmovies={setMovies}/>
+     <Button onClick={sortAscending}>LowToHigh</Button>
+          <Button onClick={sortDescending}>HighToLow</Button>
       <div>
+
+        {/* <button onClick={sortAscending}>asc</button>
+       <button onClick={sortDescending}>desc</button>   */}
         {movies.length > 0 ? (
           <div className="container ">
             <div className="grid">

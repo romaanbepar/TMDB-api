@@ -19,6 +19,8 @@ const MovieBox = ({title,overview,poster_path,vote_average,release_date, id}) =>
             
         </div>
         <div className='card-body'>
+        <i class="fa-solid fa-star"></i>
+          <h1> <i class="fa-duotone fa-star"></i>{vote_average}</h1>
         <Link to={`/${id}`}><button type="button" className='btn btn-warning btn-sm'>view More</button></Link>
             
         </div>

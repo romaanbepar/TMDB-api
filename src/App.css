@@ -14,7 +14,7 @@ body{
   margin-top: 2rem;
   width: 100%;
   margin: 1em auto;
-  background-color:yellowgreen;
+  background-color:black;
 }
 .grid{
   display: grid;
@@ -39,7 +39,9 @@ body{
   /* background: white!important; */
 
 }
-
+i{
+  color:black
+}
 .btn:focus{
   box-shadow: none!important;
   /* border:none!important; */

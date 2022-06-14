@@ -2,14 +2,14 @@ import React from "react";
 import "./indiviualmovie.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link,useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
 // const API_IMG = "https://image.tmdb.org/t/p/w500/";
 const API_URL = "https://api.themoviedb.org/3";
 
 const IndivialMovie = () => {
   const [movie, setMovie] = useState([]);
-//   const navigate=useNavigate()
+  const navigate=useNavigate()
   const { id } = useParams();
 
   useEffect(() => {
@@ -27,7 +27,13 @@ const IndivialMovie = () => {
     getmovies();
   }, [id]);
 
-  
+  useEffect(()=>{
+    const check=localStorage.getItem("users")
+       console.log(check)
+       if(check === null){
+         navigate('/login')
+       }
+    },[])
 
 
   return (
