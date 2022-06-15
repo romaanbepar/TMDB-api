@@ -60,7 +60,9 @@ function App() {
       //working
       console.log(mov);
       const sortAscending = () => {
-        const sortAscPrices = movies.sort((a, b) => a.vote_average - b.vote_average) 
+        const sortAscPrices = [...movies]
+        // const sortAscPrices =
+         movies.sort((a, b) => a.vote_average - b.vote_average) 
         console.log(sortAscPrices);   
         setPrices( sortAscPrices )
       }
@@ -95,14 +97,12 @@ function App() {
        </div>      
       :
     <>
-     <Nav1 movies={movies} setmovies={setMovies}/>
-     <Button onClick={sortAscending}>LowToHigh</Button>
-          <Button onClick={sortDescending}>HighToLow</Button>
+     <Nav1 movies={movies} setmovies={setMovies} setPrices={setPrices} />
+     {/* <Button onClick={sortAscending}>LowToHigh</Button>
+          <Button onClick={sortDescending}>HighToLow</Button> */}
+          
       <div>
-
-        {/* <button onClick={sortAscending}>asc</button>
-       <button onClick={sortDescending}>desc</button>   */}
-        {movies.length > 0 ? (
+      {movies.length > 0 ?(
           <div className="container ">
             <div className="grid">
               {movies.map((movieReq) => (
@@ -110,7 +110,7 @@ function App() {
               ))}
             </div>
           </div>
-        ) : (
+         ): (
           <h1 className="sorry">sorry!!! no such movie</h1>
         )}
       </div>

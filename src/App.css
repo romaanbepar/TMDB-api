@@ -40,7 +40,8 @@ body{
 
 }
 i{
-  color:black
+  font-size: 23px;
+    color: #ffc107;
 }
 .btn:focus{
   box-shadow: none!important;
