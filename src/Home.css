@@ -2,8 +2,16 @@
 .sec{
     background-image:url(./Asset/bg1.png);
     background-color: #cccccc; 
-  height: 500px; 
+  /* height: 580px;  */
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
+  text-align: center;
+padding-top: 205px;
+padding-bottom: 145px;
+}
+.sec h1,
+.sec h2,
+.sec p{
+    color:#cccccc
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link,useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
+import Video from "./Video"
 // const API_IMG = "https://image.tmdb.org/t/p/w500/";
 const API_URL = "https://api.themoviedb.org/3";
 
@@ -57,13 +58,17 @@ const IndivialMovie = () => {
             <li>Voting - {movie.vote_average}</li>
             <li>Release Date - {movie.release_date}</li>
             <li>Revenue - {movie.revenue}</li>
+           
             <Link to={"/app"}>
             
-              <Button variant="secondary " type="submit">
+              <Button variant="secondary " type="submit" className="mt-3">
                 Home
               </Button>
             </Link>
+            
           </div>
+          
+          
           <div className="movie-poster">
             <h3 className="tagline">{movie.tagline}</h3>
             <img
@@ -73,6 +78,10 @@ const IndivialMovie = () => {
             />
           </div>
         </div>
+        
+      </div>
+      <div className="videoo">
+      <Video/>
       </div>
     </>
   );

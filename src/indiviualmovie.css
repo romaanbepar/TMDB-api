@@ -8,6 +8,9 @@
     backdrop-filter: blur(8px);
   
   }
+  .movie-poster{
+      padding-top: 10px;
+  }
 
 .movie-title{
     font-size: 60px;
@@ -21,7 +24,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     height: 90vh;
+     height: 100vh;
 
   }
   .movie-poster img{
@@ -63,23 +66,28 @@
   
   }
 
+  /* .videoo{
+      width:100%
+  } */
+
 
   @media only screen and (max-width: 540px) {
     .movie-content{
         flex-direction: column-reverse;
-        height: auto;
-        margin: 10px 10px;
-        padding:0;
+    height: auto;
+    padding: 10px 20px;
     }
 
     .movie-description {
-        max-width: 50%;
-        margin-right: -30px;
+        max-width: 100%;
+
+        margin-right: 0px;
     }
 
     .movie-title {
-        font-size: 58px;
+        font-size: 36px;
         color: #ffffff;
+        padding-top: 10px;
     }
     /* .movie-overview {
         margin-bottom: 30px;
@@ -88,7 +96,7 @@
     
   }
 
-  @media only screen and (max-width: 414px){
+  /* @media only screen and (max-width: 414px){
     .movie-description {
         max-width: 50%;
         margin-right: 30px;
@@ -119,4 +127,4 @@ font-size: 10px;
 }
 
 
-}
+} */
