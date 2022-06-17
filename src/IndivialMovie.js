@@ -5,6 +5,10 @@ import axios from "axios";
 import { useParams, Link,useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Video from "./Video"
+
+
+
+import { Modal,show} from 'react-bootstrap';
 // const API_IMG = "https://image.tmdb.org/t/p/w500/";
 const API_URL = "https://api.themoviedb.org/3";
 
@@ -12,6 +16,10 @@ const IndivialMovie = () => {
   const [movie, setMovie] = useState([]);
   const navigate=useNavigate()
   const { id } = useParams();
+  const [show, setShow]=useState(false);
+
+    const handleShow=()=>setShow(true);
+    const handleClose=()=>setShow(false);
 
   useEffect(() => {
     async function getmovies() {
@@ -59,13 +67,29 @@ const IndivialMovie = () => {
             <li>Release Date - {movie.release_date}</li>
             <li>Revenue - {movie.revenue}</li>
            
-            <Link to={"/app"}>
             
-              <Button variant="secondary " type="submit" className="mt-3">
-                Home
-              </Button>
-            </Link>
+            {/* <div className="videoo"> */}
+      <button type="button" className="btn btn-dark mt-3 me-3" onClick={handleShow} >Watch Trailor</button>
+                  <Modal show={show} onHide={handleClose} >
+                      
+                  <Modal.Header closeButton>
+                        <Modal.Title>{movie.original_title}</Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>
+                      <Video/>
+                      </Modal.Body>
+                      <Modal.Footer>
+                          <Button variant="secondary" onClick={handleClose}>Close</Button>
+                      </Modal.Footer>
+                  </Modal>
+      {/* <Video/> */}
+      {/* </div> */}
+      <Link to={"/app"}>
             
+            <Button variant="primary " type="submit" className="mt-3">
+              Home
+            </Button>
+          </Link>
           </div>
           
           
@@ -80,9 +104,21 @@ const IndivialMovie = () => {
         </div>
         
       </div>
-      <div className="videoo">
-      <Video/>
-      </div>
+      {/* <div className="videoo">
+      <button type="button" className="btn btn-dark" onClick={handleShow} >View More</button>
+                  <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                        <Modal.Title></Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>
+                      
+                      </Modal.Body>
+                      <Modal.Footer>
+                          <Button variant="secondary" onClick={handleClose}>Close</Button>
+                      </Modal.Footer>
+                  </Modal>
+       <Video/> 
+      </div> */}
     </>
   );
 };

@@ -9,9 +9,351 @@
   text-align: center;
 padding-top: 205px;
 padding-bottom: 145px;
+border-bottom: 8px solid #222;
 }
 .sec h1,
 .sec h2,
 .sec p{
     color:#cccccc
 }
+
+/* //rightside */
+
+.homesec2{
+    display:flex;
+    padding: 70px 45px;
+    color:#cccccc;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 8px solid #222;
+}
+ 
+.homesec2 h2{
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+.homesec2 h3{
+    margin: 0.75em 0 0.25em;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+.homesec2 .leftdiv{
+    
+    width: 52%;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    z-index: 3;
+}
+
+.homesec2 .rightdiv .imgright{
+    /* max-width: 100%; */
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.homesec2 .rightdiv{
+    
+    border-radius: 20px;
+    width:437px;
+    width: 50%;
+    height: 335px;
+}
+
+/* //homsec3////////////////// */
+
+.homesec3{
+    display: flex;
+    padding: 70px 45px;
+    border-bottom: 8px solid #222;
+    color:#cccccc;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homesec3 .leftdiv .imgright{
+    /* max-width: 100%; */
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.homesec3 .leftdiv{
+    
+    border-radius: 20px;
+    width:426px;
+    height: 319px;
+}
+
+
+.homesec3 .rightdiv{
+    width: 50%;
+}
+
+.homesec3 .rightdiv h2{
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    /* width: 461px;
+    height: 165px; */
+}
+
+.homesec3 .rightdiv h3{
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin: 0.75em 0 0.25em;
+}
+
+
+/* ///////section 4 */
+
+.homesec4{
+    display:flex;
+    padding: 70px 45px;
+    color:#cccccc;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 8px solid #222;
+}
+
+.homesec4 .rightdiv .imgright{
+    /* max-width: 100%; */
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+.homesec4 .rightdiv{
+    
+    border-radius: 20px;
+    width:468px;
+    height: 351px;
+}
+
+
+.homesec4 .rightdiv{
+    width: 50%;
+}
+.homesec4 .leftdiv h2{
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    
+}
+
+.homesec4 .leftdiv h3{
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin: 0.75em 0 0.25em;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+
+/* home 5/////////////// */
+
+
+
+.homesec5{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+
+    display:flex;
+    padding: 70px 45px;
+    color:#cccccc;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 8px solid #222;
+}
+
+
+.homesec5 .leftdiv .imgright{
+    /* max-width: 100%; */
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.homesec5 .leftdiv{
+    
+    border-radius: 20px;
+    width:504px;
+    height: 378px;
+}
+
+.homesec5 .rightdiv{
+    padding: 0 0 0 3rem;
+    width: 50%; 
+}
+
+
+.homesec5 .rightdiv h2{
+    font-size: 3.125rem;
+    margin: 0 0 0.4em;
+}
+
+
+.homesec5 .rightdiv h3{
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+
+
+
+/* /////////////responsiveness//// */
+
+@media only screen and (max-width: 768px){
+    .homesec2{
+        flex-wrap: wrap;
+        justify-content:center ;
+        padding: 70px 45px;
+        text-align: center;
+    }
+
+    .homesec2 .leftdiv {
+        width: 100%;
+        height: 100%;
+        padding: 0px 0rem 20px 0;
+        
+    }
+
+    .homesec2 .rightdiv{
+    
+        border-radius: 20px;
+        /* width:437px; */
+        width: 100%;
+        height: auto;
+    }
+
+    .homesec2 h2{
+        font-size: 40px;
+    }
+    .homesec2 h3{
+        font-size: 20px;
+    }
+
+
+
+    .homesec3{
+        flex-wrap: wrap;
+        justify-content:center ;
+        padding: 70px 45px;
+        text-align: center;
+    }
+ 
+    .homesec3 .leftdiv{
+    border-radius: 20px;
+    width:100%;
+    height: 100%;
+    padding: 0px 0rem 20px 0;
+    }
+
+    .homesec3 .rightdiv{
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .homesec3 .rightdiv h2{
+        font-size: 40px;
+    }
+    .homesec3 .rightdiv h3{
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .homesec4{
+        flex-wrap: wrap;
+        justify-content:center ;
+        padding: 70px 45px;
+        text-align: center;
+    }
+
+    .homesec4 .leftdiv {
+        width: 100%;
+        height: 100%;
+        padding: 0px 0rem 20px 0;
+        
+    }
+
+    .homesec4 .rightdiv{
+    
+    
+        /* width:437px; */
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .homesec4 .leftdiv h2{
+        font-size: 40px;
+    }
+    .homesec4 .leftdiv h3{
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .homesec5{
+        flex-wrap: wrap;
+        justify-content:center ;
+        padding: 70px 45px;
+        text-align: center;
+    }
+ 
+    .homesec5 .leftdiv{
+
+    width:100%;
+    height: auto;
+    padding: 0px 0rem 20px 0;
+    }
+
+    .homesec5 .rightdiv{
+        width: 100%;
+        height: 100%;
+        padding: 20px  0 0 0;
+        font-weight: 500;
+    }
+
+
+
+    .homesec5 .rightdiv h2{
+        font-size: 40px;
+        
+    }
+    .homesec5 .rightdiv h3{
+        font-size: 20px;
+    }
+
+
+
+}
+
+
+
+
+

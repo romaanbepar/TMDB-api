@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from "axios";
+import netflix from "./Asset/netflix.png"
 
 import {
     Navbar,
@@ -21,11 +22,11 @@ import {
     // const [movies, setMovies] = useState([]);
     // const [optionValue, setOptionValue] = useState("");
     // const [mov, setPrices] = useState([]);
-//     const popular="https://api.themoviedb.org/3/movie/popular?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
-//     const LATEST_API="https://api.themoviedb.org/3/movie/latest?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US"
-// const nowplaying="https://api.themoviedb.org/3/movie/now_playing?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
-// const upcoming="https://api.themoviedb.org/3/movie/upcoming?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
-// const toprated="https://api.themoviedb.org/3/movie/top_rated?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
+    const popular="https://api.themoviedb.org/3/movie/popular?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
+    const LATEST_API="https://api.themoviedb.org/3/movie/latest?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US"
+const nowplaying="https://api.themoviedb.org/3/movie/now_playing?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
+const upcoming="https://api.themoviedb.org/3/movie/upcoming?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
+const toprated="https://api.themoviedb.org/3/movie/top_rated?api_key=b787641793c56c4a2435b97b586f64d3&language=en-US&page=1"
     const [login,setLogin]= useState(false)
  const navigate=useNavigate()
     useEffect(() => {
@@ -87,70 +88,70 @@ console.log(local)
 
 
 //     // latest movies
-// const latest=async()=>{
-//   try{
-//       const result=await axios.get(LATEST_API)
-//       console.log(result.data);
-//       setmovies([result.data])
-//       console.log(movies);
-//   }catch(error){
-//       console.log(error);
-//   }
-// }
+const latest=async()=>{
+  try{
+      const result=await axios.get(LATEST_API)
+      console.log(result.data);
+      setmovies([result.data])
+      console.log(movies);
+  }catch(error){
+      console.log(error);
+  }
+}
 
 
 // now playing movies
-// const NowPlaying=async()=>{
-//   try{
-//       const response=await axios.get(nowplaying)
-//       console.log(response.data.results);
-//       setmovies(response.data.results)
-//   }catch(error){
-//       console.log(error);
-//   }
+ const NowPlaying=async()=>{
+  try{
+      const response=await axios.get(nowplaying)
+      console.log(response.data.results);
+      setmovies(response.data.results)
+  }catch(error){
+      console.log(error);
+  }
 
-// }
+}
 
 // upcoming movies
-// const Upcoming=async()=>{
-//   try{
-//       const resp=await axios.get(upcoming)
-//       console.log(resp.data.results);
-//       setmovies(resp.data.results)
-//   }catch(error){
-//       console.log(error);
-//   }
-// }
+const Upcoming=async()=>{
+  try{
+      const resp=await axios.get(upcoming)
+      console.log(resp.data.results);
+      setmovies(resp.data.results)
+  }catch(error){
+      console.log(error);
+  }
+}
 
 // //top rated
 
-// const TopRated=async()=>{
-//   try{
-//       const resp=await axios.get(toprated)
-//       console.log(resp.data.results);
-//       setmovies(resp.data.results)
-//   }catch(error){
-//       console.log(error);
-//   }
-// }
+const TopRated=async()=>{
+  try{
+      const resp=await axios.get(toprated)
+      console.log(resp.data.results);
+      setmovies(resp.data.results)
+  }catch(error){
+      console.log(error);
+  }
+}
 
-// //Popular movies
-// const Popular=async()=>{
-//   try{
-//       const resp=await axios.get(popular)
-//       console.log(resp.data.results);
-//       setmovies(resp.data.results)
-//   }catch(error){
-//       console.log(error);
-//   }
-// }
+//Popular movies
+const Popular=async()=>{
+  try{
+      const resp=await axios.get(popular)
+      console.log(resp.data.results);
+      setmovies(resp.data.results)
+  }catch(error){
+      console.log(error);
+  }
+}
   return (
     <div>
 
         <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
       
-          <Navbar.Brand href="/">MovieDb App</Navbar.Brand>
+          <Navbar.Brand href="/"><img src={netflix} alt="logo" className='logopic' style={{width:"70px"}}/></Navbar.Brand>
           
           {login ? (
       <>
@@ -170,14 +171,13 @@ console.log(local)
             
 
 
-    {/* <NavDropdown title="Categories" id="navbarScrollingDropdown">
-             <Dropdown.Item onClick={NowPlaying}>Now Playing</Dropdown.Item>
+     <NavDropdown title="Categories" id="navbarScrollingDropdown">
+        <Dropdown.Item onClick={NowPlaying}>Now Playing</Dropdown.Item>
         <Dropdown.Item onClick={TopRated}>Top rated</Dropdown.Item>
         <Dropdown.Item onClick={Popular}>Popular</Dropdown.Item>
         <Dropdown.Item onClick={Upcoming}>Upcoming</Dropdown.Item>     
         <Dropdown.Item onClick={latest}>Latest</Dropdown.Item>
-        <Dropdown.Item onClick={Upcoming}>Upcoming</Dropdown.Item> 
-            </NavDropdown> */}
+            </NavDropdown> 
           <NavDropdown title="Ratings" id="navbarScrollingDropdown">
             <Dropdown.Item eventKey="1" onClick={sortAscending}>LowToHigh</Dropdown.Item>
             <Dropdown.Item eventKey="2" onClick={sortDescending}>HighToLow </Dropdown.Item>
